@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <declare-styleable name="ColorTextView">
+        <attr name="ctvText" format="string" />
+        <attr name="ctvBackground" format="color" />
+        <attr name="ctvTextSize" format="dimension" />
+        <attr name="ctvTextColor" format="color" />
+        <attr name="ctvCornerSize" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="mEmptyView">
+        <attr name="emptyText" format="string" />
+        <attr name="emptyTextSize" format="dimension" />
+        <attr name="emptyTextColor" format="color" />
+        <attr name="emptyImage" format="reference" />
+        <attr name="emptyType" format="enum">
+            <enum name="empty" value="0" />
+            <enum name="loading" value="1" />
+            <enum name="reload" value="2" />
+        </attr>
+        <attr name="loadingBackground" format="color" />
+        <attr name="reloadImage" format="reference" />
+        <attr name="reloadBtnText" format="string" />
+        <attr name="reloadBtnTextSize" format="dimension" />
+        <attr name="reloadBtnTextColor" format="color" />
+        <attr name="reloadBtnBackground" format="reference" />
+        <attr name="reloadText" format="string" />
+        <attr name="reloadTextSize" format="dimension" />
+        <attr name="reloadTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ShapeImageView">
+        <attr name="viewShape" format="enum">
+            <enum name="rect" value="1" />
+            <enum name="circle" value="2" />
+            <enum name="oval" value="3" />
+        </attr>
+        <attr name="round_radius" format="dimension" />
+        <attr name="border_size" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+</resources>

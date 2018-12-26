@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+    <FrameLayout android:layout_width="wrap_content"
+                 android:layout_height="wrap_content">
+        <ImageView android:layout_width="15dp"
+                   android:layout_height="15dp"
+                   android:layout_margin="3dp"
+                   android:background="@android:color/holo_blue_dark"
+                   android:src="@drawable/ic_loading"/>
+        <cn.onestravel.library.kotlin.base.view.CircleTextView
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_gravity="right"
+                android:background="#ff0000"
+                android:maxLines="1"
+                android:lines="1"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                android:padding="1dp"
+                android:text="99+"/>
+    </FrameLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_marginTop="6dp"
+              android:text="患者"
+
+    />
+</LinearLayout>
