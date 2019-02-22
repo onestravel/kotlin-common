@@ -20,7 +20,7 @@ import kotlinx.android.synthetic.main.view_empty.view.*
 
 
 /**
- * @author wanghu
+ * @author  onestravel
  * @version 1.0.0
  * @project BrZhongYiAndroid
  * @description 自定义空视图的显示，包含空页面，正在加载的页面，重新加载的页面

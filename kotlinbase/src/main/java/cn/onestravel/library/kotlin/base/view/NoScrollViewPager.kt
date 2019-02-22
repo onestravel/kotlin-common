@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 
 /**
- * @author wanghu
+ * @author  onestravel
  * @version 1.0.0
  * @project MyApplication
  * @description

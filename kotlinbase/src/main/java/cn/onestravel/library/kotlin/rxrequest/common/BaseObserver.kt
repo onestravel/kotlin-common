@@ -7,7 +7,7 @@ import io.reactivex.disposables.Disposable
 import retrofit2.HttpException
 
 /**
- * @name cn.onestravel.library.kotlin.request.common.BaseObserver
+ * @name cn.onestravel.library.kotlin.rxrequest.common.BaseObserver
  * @description 请求返回结果，返回json数据必须符合 {"code":"0000","msg":""}
  * @createTime 2018/12/12 17:00
  * @author onestravel

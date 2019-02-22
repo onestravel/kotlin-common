@@ -5,7 +5,7 @@ import android.widget.ImageView
 import cn.onestravel.library.kotlin.base.extend.loadImage
 
 /**
- * @name cn.onestravel.library.kotlin.base.utils.DensityUtil
+ * @name DensityUtil
  * @description 尺寸转换工具类
  * @createTime 2018/11/30 15:27
  * @author onestravel

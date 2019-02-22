@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.layout_base_list.*
 import org.jetbrains.anko.support.v4.onRefresh
 
 /**
- * @name cn.onestravel.library.kotlin.base.activity.BaseListActivity
+ * @name BaseListActivity
  * @description 默认含有RecyclerView的可下拉刷新，上拉加载（可隐藏）Activity基类
  * @createTime 2018/11/28 18:02
  * @author onestravel

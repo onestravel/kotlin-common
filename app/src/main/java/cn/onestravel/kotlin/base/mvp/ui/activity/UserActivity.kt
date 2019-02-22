@@ -4,7 +4,7 @@ import cn.onestravel.kotlin.base.mvp.R
 import cn.onestravel.kotlin.base.mvp.presenter.impl.UserPresenterImpl
 import cn.onestravel.kotlin.base.mvp.presenter.interf.UserPresenter
 import cn.onestravel.kotlin.base.mvp.view.UserView
-import cn.onestravel.library.kotlin.mvp.activity.BaseMvpActivity
+import  BaseMvpActivity
 
 /**
  * @name cn.onestravel.kotlin.base.mvp.ui.activity.UserActivity

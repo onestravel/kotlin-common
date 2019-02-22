@@ -1,7 +1,7 @@
 package cn.test
 
 import android.os.Bundle
-import cn.onestravel.library.kotlin.mvp.presenter.impl.BaseMvpPresenterImpl
+import  impl.BaseMvpPresenterImpl
 
 /**
  * @name cn.test.MainPresenterImpl

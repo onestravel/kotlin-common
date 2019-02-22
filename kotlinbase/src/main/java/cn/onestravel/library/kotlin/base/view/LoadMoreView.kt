@@ -1,7 +1,7 @@
 package cn.onestravel.library.kotlin.base.view
 
 /**
- * @name cn.onestravel.library.kotlin.base.view.LoadMoreView
+ * @name LoadMoreView
  * @description 上拉加载的 footer view
  * @createTime 2018/11/29 17:52
  * @author onestravel

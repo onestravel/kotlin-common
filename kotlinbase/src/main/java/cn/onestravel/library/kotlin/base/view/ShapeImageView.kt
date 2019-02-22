@@ -12,7 +12,7 @@ import cn.onestravel.library.kotlin.base.utils.ImageUtils
 
 
 /**
- * @author wanghu
+ * @author  onestravel
  * @version 1.0.0
  * @projectName EasouAndroid-zy
  * @desctrion 自定义形状的ImageView ,REC 表示矩形的ImageView，CIRCLE 表示圆形的ImageView，OVAL 表示椭圆的ImageView

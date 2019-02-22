@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 
 /**
- * @name cn.onestravel.library.kotlin.base.view.LoadMoreRecyclerView
+ * @name LoadMoreRecyclerView
  * @description 可以实现上拉加载，下拉刷新的 RecyclerView
  * @createTime 2018/11/29 17:53
  * @author onestravel

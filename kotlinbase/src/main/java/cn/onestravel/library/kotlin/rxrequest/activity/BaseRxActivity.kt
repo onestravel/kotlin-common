@@ -13,7 +13,7 @@ import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 
 /**
- * @name cn.onestravel.library.kotlin.request.activity.BaseMvpActivity
+ * @name cn.onestravel.library.kotlin.rxrequest.activity.BaseRxActivity
  * @description 处理RXJava的生命周期的Activity
  * @createTime 2018/12/12 17:00
  * @author onestravel

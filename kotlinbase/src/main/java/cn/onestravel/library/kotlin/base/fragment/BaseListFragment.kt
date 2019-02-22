@@ -12,7 +12,7 @@ import cn.onestravel.library.kotlin.base.adapter.BaseRecyclerAdapter
 import kotlinx.android.synthetic.main.layout_base_list.*
 
 /**
- * @name cn.onestravel.library.kotlin.base.fragment.BaseListFragment
+ * @name BaseListFragment
  * @description 默认含有RecyclerView的可下拉刷新，上拉加载（可隐藏）Fragment基类
  * @createTime 2018/11/28 18:25
  * @author onestravel

@@ -3,7 +3,7 @@ package cn.onestravel.library.kotlin.rxrequest.common
 import java.io.Serializable
 
 /**
- * @name cn.onestravel.library.kotlin.request.common.BaseResponse
+ * @name cn.onestravel.library.kotlin.rxrequest.common.BaseResponse
  * @description 请求返回结果数据基类
  * @createTime 2018/12/12 17:00
  * @author onestravel

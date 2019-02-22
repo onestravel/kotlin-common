@@ -1,6 +1,6 @@
 package cn.test
 
-import cn.onestravel.library.kotlin.mvp.presenter.BaseMvpPresenter
+import  BaseMvpPresenter
 import cn.onestravel.library.kotlin.mvp.view.BaseMvpView
 
 /**

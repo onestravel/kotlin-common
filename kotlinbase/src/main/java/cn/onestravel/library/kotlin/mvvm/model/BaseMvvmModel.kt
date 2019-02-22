@@ -1,7 +1,7 @@
-package cn.onestravel.library.kotlin.mvvp.model
+package cn.onestravel.library.kotlin.mvvm.model
 
 /**
- * @name cn.onestravel.library.kotlin.mvvp.model.BaseMvvmModel
+ * @name  BaseMvvmModel
  * @description //TODO
  * @createTime 2018/12/26 17:16
  * @author onestravel

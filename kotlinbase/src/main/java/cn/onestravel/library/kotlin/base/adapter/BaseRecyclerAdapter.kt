@@ -24,7 +24,7 @@ import org.jetbrains.anko.toast
 
 
 /**
- * @name cn.onestravel.library.kotlin.base.adapter.BaseAdapter
+ * @name BaseRecyclerAdapter
  * @description 所有RecyclerView 的Adapter 的基类
  * @createTime 2018/11/29 14:32
  * @author onestravel
@@ -215,10 +215,17 @@ abstract class BaseRecyclerAdapter<T> : RecyclerView.Adapter<VH>(), View.OnClick
 
 
 }
+
+/**
+ *Item 的点击事件
+ */
 interface OnItemClickListener<T> {
     fun onItemClick(view: View, position: Int, data: T)
 }
 
+/**
+ *Item 的长按事件
+ */
 interface OnItemLongClickListener<T> {
     fun onItemLongClick(view: View, position: Int, data: T):Boolean
 }

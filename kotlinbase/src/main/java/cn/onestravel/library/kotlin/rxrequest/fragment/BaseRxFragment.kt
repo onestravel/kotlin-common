@@ -16,7 +16,7 @@ import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 
 /**
- * @name cn.onestravel.library.kotlin.request.fragment.BaseMvpActivity
+ * @name cn.onestravel.library.kotlin.rxrequest.fragment.BaseMvpActivity
  * @description 处理RXJava的生命周期的 Fragment
  * @createTime 2018/12/12 17:00
  * @author onestravel

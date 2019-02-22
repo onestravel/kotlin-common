@@ -6,7 +6,7 @@ import retrofit2.HttpException
 import java.io.Serializable
 
 /**
- * @name cn.onestravel.library.kotlin.request.common.BaseObserver2
+ * @name cn.onestravel.library.kotlin.rxrequest.common.BaseObserver2
  * @description 请求返回结果，返回json数据必须符合 {"code":"0000","msg":"","data":{},"datas":[]},data 和 datas 的数据 bean 可以不相同
  * @createTime 2018/12/12 17:00
  * @author onestravel

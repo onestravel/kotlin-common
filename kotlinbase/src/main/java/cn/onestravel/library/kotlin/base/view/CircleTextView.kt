@@ -10,7 +10,7 @@ import android.util.AttributeSet
 import android.widget.TextView
 
 /**
- * @author wanghu
+ * @author  onestravel
  * @version 1.0.0
  * @projectName BrZhongYiAndroid
  * @desctrion 自定义圆形的TextView，以适应不同的显示需求

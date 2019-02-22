@@ -7,7 +7,7 @@ import java.io.IOException
 import java.util.HashMap
 
 /**
- * @name cn.onestravel.library.kotlin.request.common.HttpCommonInterceptor
+ * @name cn.onestravel.library.kotlin.rxrequest.common.HttpCommonInterceptor
  * @description 添加公共参数请求拦截器
  * @createTime 2018/12/12 17:00
  * @author onestravel

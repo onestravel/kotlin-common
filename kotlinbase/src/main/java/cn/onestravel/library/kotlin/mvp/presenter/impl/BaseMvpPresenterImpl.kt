@@ -1,4 +1,4 @@
-package cn.onestravel.library.kotlin.mvp.presenter.impl
+package  impl
 
 import android.os.Bundle
 import cn.onestravel.library.kotlin.mvp.presenter.BaseMvpPresenter
@@ -6,7 +6,7 @@ import cn.onestravel.library.kotlin.mvp.view.BaseMvpView
 import java.lang.ref.WeakReference
 
 /**
- * @name cn.onestravel.library.kotlin.mvp.presenter.impl.BaseMvpPresenterImpl
+ * @name  BaseMvpPresenterImpl
  * @description 所有Mvp 的Presenter 的基类，对生命周期进行处理
  * @createTime 2018/12/12 16:52
  * @author onestravel

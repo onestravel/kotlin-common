@@ -24,7 +24,7 @@ import org.jetbrains.anko.padding
 /**
  * @author onestravel
  * @version 1.0.0
- * @name cn.onestravel.library.kotlin.base.view.ClassicalFooter
+ * @name ClassicalFooter
  * @description 经典上拉加载
  * @createTime 2018/11/30 15:23
  */

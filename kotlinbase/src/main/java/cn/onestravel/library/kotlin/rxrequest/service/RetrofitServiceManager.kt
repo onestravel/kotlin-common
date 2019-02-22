@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit
 
 
 /**
- * @name cn.onestravel.library.kotlin.request.common.RetrofitServiceManager
+ * @name cn.onestravel.library.kotlin.rxrequest.service.RetrofitServiceManager
  * @description 生成接口实例的管理类
  * @createTime 2018/12/12 17:00
  * @author onestravel

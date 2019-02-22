@@ -6,7 +6,7 @@ import okhttp3.Response
 import java.io.IOException
 
 /**
- * @name cn.onestravel.library.kotlin.request.common.RetryInterceptor
+ * @name cn.onestravel.library.kotlin.rxrequest.common.RetryInterceptor
  * @description 请求失败重试拦截器
  * @createTime 2018/12/12 17:00
  * @author onestravel

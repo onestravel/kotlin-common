@@ -6,7 +6,7 @@ import cn.onestravel.library.kotlin.base.utils.ImageUtils
 import com.bumptech.glide.request.RequestListener
 
 /**
- * @name cn.onestravel.library.kotlin.base.extend.ImageViewExtend
+ * @name ImageViewExtend
  * @description ImageView 加载网络图片的扩展方法
  * @createTime 2018/11/29 15:32
  * @author onestravel

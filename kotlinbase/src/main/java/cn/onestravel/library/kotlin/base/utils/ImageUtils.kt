@@ -12,7 +12,7 @@ import com.bumptech.glide.RequestManager
 import com.bumptech.glide.request.RequestListener
 
 /**
- * @name cn.onestravel.library.kotlin.base.utils.ImageUtils1
+ * @name ImageUtils1
  * @description 实现使用图片加载框架加载网络图片
  * @createTime 2018/11/29 15:01
  * @author onestravel

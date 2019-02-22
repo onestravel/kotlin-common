@@ -3,11 +3,11 @@ package cn.onestravel.library.kotlin.mvp.activity
 import android.os.Bundle
 import cn.onestravel.library.kotlin.base.activity.BaseActivity
 import cn.onestravel.library.kotlin.base.view.LoadingDialog
-import cn.onestravel.library.kotlin.mvp.presenter.BaseMvpPresenter
+import  BaseMvpPresenter
 import cn.onestravel.library.kotlin.mvp.view.BaseMvpView
 
 /**
- * @name cn.onestravel.library.kotlin.mvp.activity.BaseMvpActivity
+ * @name  BaseMvpActivity
  * @description 所有Mvp架构的 Activity 的基类
  * @createTime 2018/12/12 17:00
  * @author onestravel

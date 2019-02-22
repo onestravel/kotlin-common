@@ -1,10 +1,9 @@
-package cn.onestravel.library.kotlin.mvvp.fragment
+package cn.onestravel.library.kotlin.mvvm.fragment
 
-import cn.onestravel.library.kotlin.base.activity.BaseActivity
 import cn.onestravel.library.kotlin.base.fragment.BaseFragment
 
 /**
- * @name cn.onestravel.library.kotlin.mvvp.activity.BaseMvvmActivity
+ * @name  .BaseMvvmActivity
  * @description //TODO
  * @createTime 2018/12/26 17:13
  * @author onestravel

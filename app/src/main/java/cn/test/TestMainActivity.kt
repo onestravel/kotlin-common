@@ -1,7 +1,7 @@
 package cn.test
 
 import cn.onestravel.kotlin.base.mvp.R
-import cn.onestravel.library.kotlin.mvp.activity.BaseMvpActivity
+import  BaseMvpActivity
 
 /**
  * @name cn.test.TestMainActivity

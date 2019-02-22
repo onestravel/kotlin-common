@@ -4,7 +4,7 @@ import android.os.Bundle
 import cn.onestravel.library.kotlin.mvp.view.BaseMvpView
 
 /**
- * @name cn.onestravel.library.kotlin.mvp.presenter.BaseMvpPresenterImpl
+ * @name  BaseMvpPresenterImpl
  * @description 所有界面presenter的基类
  * @createTime 2018/12/12 16:27
  * @author onestravel
