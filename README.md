@@ -1,4 +1,4 @@
-# 基于Kotlin语言封装依赖库
+# Kotlin语言基于Mvp+Retrofit+RxJava封装的Android项目的基础依赖库
 
 ## 前言
 
