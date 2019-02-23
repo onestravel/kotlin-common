@@ -1,6 +1,7 @@
 package cn.onestravel.library.kotlin.base.utils
 
 import android.content.res.Resources
+import android.support.annotation.Px
 import android.widget.ImageView
 import cn.onestravel.library.kotlin.base.extend.loadImage
 
@@ -13,18 +14,32 @@ import cn.onestravel.library.kotlin.base.extend.loadImage
  */
 object DensityUtil {
     val density = Resources.getSystem().getDisplayMetrics().density
-     fun dip2px(dp: Int): Int {
+
+    /**
+     * dip转换为px
+     */
+    fun dip2px(dp: Int): Int {
         return (dp * density).toInt()
     }
 
-    fun dip2px(dp: Float): Int {
-        return (dp * density).toInt()
+
+    /**
+     * px转换为dip
+     */
+    fun px2dip(px:  Float): Int {
+        return (px / density).toInt()
     }
 
+    /**
+     * 获取屏幕宽度
+     */
     fun appWidth(): Int {
         return Resources.getSystem().getDisplayMetrics().widthPixels
     }
 
+    /**
+     * 获取屏幕高度
+     */
     fun appHeight(): Int {
         return Resources.getSystem().getDisplayMetrics().heightPixels
     }

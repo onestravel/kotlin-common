@@ -1,9 +1,10 @@
 package cn.onestravel.library.kotlin.mvp.fragment
 
 import android.os.Bundle
-import cn.onestravel.library.kotlin.base.fragment.BaseFragment
 import cn.onestravel.library.kotlin.mvp.presenter.BaseMvpPresenter
 import cn.onestravel.library.kotlin.mvp.view.BaseMvpView
+import cn.onestravel.library.kotlin.rxrequest.fragment.BaseRxFragment
+import cn.onestravel.library.kotlin.rxrequest.fragment.BaseRxListFragment
 
 /**
  * @name  BaseMvpActivity
@@ -12,7 +13,7 @@ import cn.onestravel.library.kotlin.mvp.view.BaseMvpView
  * @author onestravel
  * @version 1.0.0
  */
-abstract class BaseMvpFragment<V : BaseMvpView, P : BaseMvpPresenter<V>> : BaseFragment(), BaseMvpView {
+abstract class BaseRxMvpListFragment<V : BaseMvpView, P : BaseMvpPresenter<V>> : BaseRxListFragment(), BaseMvpView {
     private val presenter by lazy { createPresenter() }
 
     protected abstract fun createPresenter(): P

@@ -1,5 +1,6 @@
 package cn.onestravel.library.kotlin.rxrequest.common
 
+import android.util.Log
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
 import retrofit2.HttpException
@@ -13,18 +14,43 @@ import java.io.Serializable
  * @version 1.0.0
  */
 abstract class BaseObserver2<DATA : Serializable,ITEM:Serializable> : Observer<ResponseResult2<DATA,ITEM>>, ObserverResult<ResponseResult2<DATA,ITEM>> {
-    override fun onFailure(code: String?, msg: String?) {
-    }
-
-    override fun onFinish() {
-    }
-
+    /**
+     * 请求开始 处理基本的loading框的显示等
+     *
+     * @param d
+     */
     override fun onStart(d: Disposable) {
-
+        Log.e(
+             BaseObserver2.TAG,
+            "===========单个接口请求开始  =========="
+        )
     }
 
-    abstract override fun onSuccess(result: ResponseResult2<DATA,ITEM>)
+    /**
+     * 此方法必须实现
+     *
+     * @param result 请求成功的结果
+     */
+    abstract override fun onSuccess(result: ResponseResult2<DATA, ITEM>)
 
+    /**
+     * 请求失败
+     *
+     * @param code 错误码
+     * @param msg  错误提示语
+     */
+    override fun onFailure(code: String, msg: String?) {
+        Log.e(
+             BaseObserver2.TAG,
+            "接口请求失败============code = " + code + "errorMsg =" + msg    )
+    }
+
+    /**
+     * 请求都完成时之行此方法
+     */
+    override fun onFinish() {
+
+    }
 
     override fun onSubscribe(d: Disposable) {
         onStart(d)
@@ -61,5 +87,9 @@ abstract class BaseObserver2<DATA : Serializable,ITEM:Serializable> : Observer<R
 
     override fun onComplete() {
         onFinish()
+    }
+
+    companion object {
+        private val TAG = "RequestBaseObserver2"
     }
 }

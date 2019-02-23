@@ -9,19 +9,19 @@ import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
 /**
- * 类描述：养生建议 订单记录相关的请求service
- * 创建人：YangYajun
+ * 类描述：订单记录相关的请求service
+ * 创建人：
  * 创建时间：2018/8/23
  */
 
 interface OrderRecordService : BaseService {
     //获取订单记录列表
     @FormUrlEncoded
-    @POST("apiController")
+    @POST("orderList")
     fun getOrderRecordList(@FieldMap map: Map<String, String>): Observable<User>
 
     //获取订单详情
     @FormUrlEncoded
-    @POST("apiController")
+    @POST("orderDetail")
     fun getOrderDetailInfo(@FieldMap map: Map<String, String>): Observable<ResponseResult1<User>>
 }

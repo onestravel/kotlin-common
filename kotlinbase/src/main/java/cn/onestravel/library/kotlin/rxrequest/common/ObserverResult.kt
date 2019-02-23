@@ -28,10 +28,14 @@ interface ObserverResult<R> {
      * @param code 错误码
      * @param msg 错误提示语
      */
-    fun onFailure(code: String?, msg: String?)
+    fun onFailure(code: String, msg: String?)
 
     /**
      * 请求都完成时之行此方法
      */
     fun onFinish()
+
+    companion object {
+        private val TAG = "request"
+    }
 }

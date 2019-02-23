@@ -1,19 +1,19 @@
 package cn.onestravel.library.kotlin.mvp.activity
 
 import android.os.Bundle
-import cn.onestravel.library.kotlin.base.activity.BaseActivity
+import cn.onestravel.library.kotlin.base.activity.BaseListActivity
 import cn.onestravel.library.kotlin.base.view.LoadingDialog
 import cn.onestravel.library.kotlin.mvp.presenter.BaseMvpPresenter
 import cn.onestravel.library.kotlin.mvp.view.BaseMvpView
 
 /**
- * @name  BaseMvpActivity
- * @description 所有Mvp架构的 Activity 的基类
+ * @name  BaseMvpListActivity
+ * @description 所有Mvp架构的 默认含有RecyclerView的可下拉刷新，上拉加载（可隐藏）Activity基类
  * @createTime 2018/12/12 17:00
  * @author onestravel
  * @version 1.0.0
  */
-abstract class BaseMvpActivity<V : BaseMvpView, P : BaseMvpPresenter<V>> : BaseActivity(), BaseMvpView {
+abstract class BaseMvpListActivity<V : BaseMvpView, P : BaseMvpPresenter<V>> : BaseListActivity(), BaseMvpView {
     private val presenter by lazy { createPresenter() }
     private var mLoadingDialog: LoadingDialog? = null
     protected abstract fun createPresenter(): P

@@ -6,7 +6,7 @@ import android.support.annotation.CheckResult
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import cn.onestravel.library.kotlin.base.fragment.BaseFragment
+import cn.onestravel.library.kotlin.base.fragment.BaseListFragment
 import com.trello.rxlifecycle2.LifecycleProvider
 import com.trello.rxlifecycle2.LifecycleTransformer
 import com.trello.rxlifecycle2.RxLifecycle
@@ -16,13 +16,13 @@ import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 
 /**
- * @name BaseRxFragment
- * @description 处理RXJava的生命周期的 Fragment
+ * @name BaseRxListFragment
+ * @description 处理RXJava的生命周期的 ListFragment
  * @createTime 2018/12/12 17:00
  * @author onestravel
  * @version 1.0.0
  */
-abstract class BaseRxFragment : BaseFragment(), LifecycleProvider<FragmentEvent> {
+abstract class BaseRxListFragment : BaseListFragment(), LifecycleProvider<FragmentEvent> {
     private val lifecycleSubject:BehaviorSubject<FragmentEvent> = BehaviorSubject.create()
 
     override fun lifecycle(): Observable<FragmentEvent> {

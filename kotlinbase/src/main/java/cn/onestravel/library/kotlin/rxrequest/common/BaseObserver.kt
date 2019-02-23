@@ -13,17 +13,17 @@ import retrofit2.HttpException
  * @author onestravel
  * @version 1.0.0
  */
-abstract class BaseObserver<T : ResponseResult> : Observer<T> {
+abstract class BaseObserver<T : ResponseResult> : Observer<T>,ObserverResult<T> {
 
     /**
      * 请求开始 处理基本的loading框的显示等
      *
      * @param d
      */
-    fun onStart(d: Disposable) {
+    override fun onStart(d: Disposable) {
         Log.e(
             TAG,
-            "===========单个接口请求开始========================================================================================================================================"
+            "===========单个接口请求开始  =========="
         )
     }
 
@@ -32,7 +32,7 @@ abstract class BaseObserver<T : ResponseResult> : Observer<T> {
      *
      * @param result 请求成功的结果
      */
-    abstract fun onSuccess(result: T)
+    abstract override fun onSuccess(result: T)
 
     /**
      * 请求失败
@@ -40,17 +40,17 @@ abstract class BaseObserver<T : ResponseResult> : Observer<T> {
      * @param code 错误码
      * @param msg  错误提示语
      */
-    fun onFailure(code: String, msg: String?) {
+    override fun onFailure(code: String, msg: String?) {
         Log.e(
             TAG,
-            "接口请求失败============code = " + code + "errorMsg =" + msg + "======================================================================================================================================="
+            "接口请求失败============code = " + code + "errorMsg =" + msg 
         )
     }
 
     /**
      * 请求都完成时之行此方法
      */
-    fun onFinish() {
+    override fun onFinish() {
 
     }
 
@@ -91,6 +91,6 @@ abstract class BaseObserver<T : ResponseResult> : Observer<T> {
     }
 
     companion object {
-        private val TAG = "request"
+        private val TAG = "RequestBaseObserver"
     }
 }

@@ -1,7 +1,7 @@
 package cn.onestravel.library.kotlin.mvp.fragment
 
 import android.os.Bundle
-import  BaseMvpPresenter
+import cn.onestravel.library.kotlin.mvp.presenter.BaseMvpPresenter
 import cn.onestravel.library.kotlin.mvp.view.BaseMvpView
 import cn.onestravel.library.kotlin.rxrequest.fragment.BaseRxFragment
 

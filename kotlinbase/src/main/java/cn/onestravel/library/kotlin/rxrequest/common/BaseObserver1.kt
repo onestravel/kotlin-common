@@ -14,17 +14,17 @@ import java.io.Serializable
  * @author onestravel
  * @version 1.0.0
  */
-abstract class BaseObserver1<DATA : Serializable> : Observer<ResponseResult1<DATA>> {
+abstract class BaseObserver1<DATA : Serializable> : Observer<ResponseResult1<DATA>>,ObserverResult<ResponseResult1<DATA>> {
 
     /**
      * 请求开始 处理基本的loading框的显示等
      *
      * @param d
      */
-    fun onStart(d: Disposable) {
+    override fun onStart(d: Disposable) {
         Log.e(
             TAG,
-            "===========单个接口请求开始========================================================================================================================================"
+            "===========单个接口请求开始  =========="
         )
     }
 
@@ -33,7 +33,7 @@ abstract class BaseObserver1<DATA : Serializable> : Observer<ResponseResult1<DAT
      *
      * @param result 请求成功的结果
      */
-    abstract fun onSuccess(result: ResponseResult1<DATA>)
+    abstract override fun onSuccess(result: ResponseResult1<DATA>)
 
     /**
      * 请求失败
@@ -41,17 +41,16 @@ abstract class BaseObserver1<DATA : Serializable> : Observer<ResponseResult1<DAT
      * @param code 错误码
      * @param msg  错误提示语
      */
-    fun onFailure(code: String, msg: String?) {
+    override fun onFailure(code: String, msg: String?) {
         Log.e(
             TAG,
-            "接口请求失败============code = " + code + "errorMsg =" + msg + "======================================================================================================================================="
-        )
+            "接口请求失败============code = " + code + "errorMsg =" + msg    )
     }
 
     /**
      * 请求都完成时之行此方法
      */
-    open fun onFinish() {
+    override fun onFinish() {
 
     }
 
@@ -92,6 +91,6 @@ abstract class BaseObserver1<DATA : Serializable> : Observer<ResponseResult1<DAT
     }
 
     companion object {
-        private val TAG = "request"
+        private val TAG = "RequestBaseObserver1"
     }
 }

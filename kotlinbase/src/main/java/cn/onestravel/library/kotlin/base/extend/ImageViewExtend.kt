@@ -12,6 +12,11 @@ import com.bumptech.glide.request.RequestListener
  * @author onestravel
  * @version 1.0.0
  */
+
+
+/**
+ *
+ */
 inline fun ImageView.loadImage(imgUrl: String): ImageView {
     ImageUtils.loadImageUrl(this.context, imgUrl, this)
     return this
@@ -30,9 +35,4 @@ inline fun ImageView.loadGif(imgUrl: String): ImageView {
 inline fun ImageView.loadImgCallBack(imgUrl: String, requestListener: RequestListener<Bitmap>): ImageView {
     ImageUtils.loadImageCallBack(this.context, imgUrl, this, requestListener)
     return this
-}
-
-
-fun llll(re: (RequestListener<Bitmap>) -> Unit) {
-
 }

@@ -3,7 +3,7 @@ package cn.onestravel.library.kotlin.rxrequest.activity
 import android.os.Bundle
 import android.support.annotation.CallSuper
 import android.support.annotation.CheckResult
-import cn.onestravel.library.kotlin.base.activity.BaseActivity
+import cn.onestravel.library.kotlin.base.activity.BaseListActivity
 import com.trello.rxlifecycle2.LifecycleProvider
 import com.trello.rxlifecycle2.LifecycleTransformer
 import com.trello.rxlifecycle2.RxLifecycle
@@ -13,13 +13,13 @@ import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 
 /**
- * @name BaseRxActivity
- * @description 处理RXJava的生命周期的Activity
+ * @name BaseRxListActivity
+ * @description 处理RXJava的生命周期的ListActivity
  * @createTime 2018/12/12 17:00
  * @author onestravel
  * @version 1.0.0
  */
-abstract class BaseRxActivity : BaseActivity(), LifecycleProvider<ActivityEvent> {
+abstract class BaseRxListActivity : BaseListActivity(), LifecycleProvider<ActivityEvent> {
     private val lifecycleSubject:BehaviorSubject<ActivityEvent> = BehaviorSubject.create()
 
     @CheckResult

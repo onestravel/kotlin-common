@@ -4,7 +4,7 @@ import cn.onestravel.kotlin.base.mvp.R
 import cn.onestravel.kotlin.base.mvp.presenter.impl.UserPresenterImpl
 import cn.onestravel.kotlin.base.mvp.presenter.interf.UserPresenter
 import cn.onestravel.kotlin.base.mvp.view.UserView
-import  BaseMvpActivity
+import cn.onestravel.library.kotlin.mvp.activity.BaseMvpActivity
 
 /**
  * @name cn.onestravel.kotlin.base.mvp.ui.activity.UserActivity
@@ -13,7 +13,7 @@ import  BaseMvpActivity
  * @author onestravel
  * @version 1.0.0
  */
-class UserActivity: BaseMvpActivity<UserView,UserPresenter>() {
+class UserActivity: BaseMvpActivity<UserView, UserPresenter>() {
     override fun createPresenter(): UserPresenter {
         return UserPresenterImpl()
     }

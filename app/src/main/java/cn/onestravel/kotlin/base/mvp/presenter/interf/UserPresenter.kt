@@ -1,7 +1,7 @@
 package cn.onestravel.kotlin.base.mvp.presenter.interf
 
 import cn.onestravel.kotlin.base.mvp.view.UserView
-import  BaseMvpPresenter
+import cn.onestravel.library.kotlin.mvp.presenter.BaseMvpPresenter
 
 /**
  * @name cn.onestravel.kotlin.base.mvp.presenter.interf.UserPresenter

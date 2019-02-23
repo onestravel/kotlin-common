@@ -1,13 +1,13 @@
 package cn.onestravel.library.kotlin.mvp.activity
 
 import android.os.Bundle
-import  BaseMvpPresenter
+import cn.onestravel.library.kotlin.mvp.presenter.BaseMvpPresenter
 import cn.onestravel.library.kotlin.mvp.view.BaseMvpView
 import cn.onestravel.library.kotlin.rxrequest.activity.BaseRxActivity
 
 /**
  * @name  BaseMvpActivity
- * @description 所有Mvp架构的 Activity 的基类
+ * @description 所有Mvp架构的 采用RxJava+Retrofit 请求的Activity 的基类
  * @createTime 2018/12/12 17:00
  * @author onestravel
  * @version 1.0.0

@@ -51,6 +51,13 @@ class ShapeImageView @JvmOverloads constructor(context: Context, attrs: Attribut
             invalidate()
         }
 
+    fun setBorderSize(mBorderSize: Int) {
+        this.borderSize = mBorderSize.toFloat()
+        mBorderPaint.strokeWidth = mBorderSize.toFloat()
+        initRect()
+        invalidate()
+    }
+
     init {
         init(attrs)
         mBorderPaint.style = Paint.Style.STROKE
@@ -186,12 +193,7 @@ class ShapeImageView @JvmOverloads constructor(context: Context, attrs: Attribut
         mBorderRect.bottom = height - borderSize / 2
     }
 
-    fun setBorderSize(mBorderSize: Int) {
-        this.borderSize = mBorderSize.toFloat()
-        mBorderPaint.strokeWidth = mBorderSize.toFloat()
-        initRect()
-        invalidate()
-    }
+
 
     companion object {
 

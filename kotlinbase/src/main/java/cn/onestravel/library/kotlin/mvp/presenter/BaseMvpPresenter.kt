@@ -5,7 +5,7 @@ import cn.onestravel.library.kotlin.mvp.view.BaseMvpView
 
 /**
  * @name  BaseMvpPresenterImpl
- * @description 所有界面presenter的基类
+ * @description 所有界面presenter的接口类
  * @createTime 2018/12/12 16:27
  * @author onestravel
  * @version 1.0.0

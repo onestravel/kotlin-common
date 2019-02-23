@@ -8,7 +8,7 @@ import io.reactivex.Observable
 
 /**
  * 类描述：订单记录请求的相关loader
- * 创建人：YangYajun
+ * 创建人：
  * 创建时间：2018/8/23
  */
 
@@ -20,7 +20,7 @@ class OrderRecordLoader : BaseLoader<OrderRecordService>() {
     }
 
     /**
-     * 请求养生铺订单记录列表
+     * 请求订单记录列表
      *
      * @param map
      * @return  订单列表的Bean
@@ -30,7 +30,7 @@ class OrderRecordLoader : BaseLoader<OrderRecordService>() {
     }
 
     /**
-     * 请求养生铺订单列表的详情
+     * 请求订单列表的详情
      *
      * @param map
      * @return 详情的Bean

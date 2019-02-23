@@ -8,7 +8,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 /**
- * @name cn.onestravel.library.kotlin.rxrequest.loader.BaseLoader
+ * @name BaseLoader
  * @description 封装公共loader进行线程切换
  * @createTime 2018/12/12 17:00
  * @author onestravel
