@@ -11,7 +11,7 @@
                    android:layout_margin="3dp"
                    android:background="@android:color/holo_blue_dark"
                    android:src="@drawable/ic_loading"/>
-        <cn.onestravel.library.kotlin.base.view.CircleTextView
+        <cn.onestravel.library.kotlin.one.view.CircleTextView
                 android:layout_width="13dp"
                 android:layout_height="13dp"
                 android:layout_gravity="right"

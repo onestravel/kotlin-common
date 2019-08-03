@@ -12,5 +12,5 @@ import java.io.Serializable
 class ResponseResult2<DATA:Serializable,ITEM:Serializable>(
     val data: DATA?,
     val datas: MutableList<ITEM>? = ArrayList()
-) :BaseResponse(), Serializable
+) :OneResponse(), Serializable
 

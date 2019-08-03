@@ -1259,7 +1259,7 @@ RxJava+Retrofit 请求的观察者，返回特定数据结构的数据，并进�
 
 ```kotlin
 /**
- * @name cn.onestravel.library.kotlin.rxrequest.common.BaseObserver
+ * @name cn.onestravel.library.kotlin.rxrequest.common.OneObserver
  * @description 请求返回结果，返回json数据必须符合 {"code":"0000","msg":""}
  * @createTime 2018/12/12 17:00
  * @author onestravel
@@ -1353,7 +1353,7 @@ BaseResponse:
 
 ```kotlin
 /**
- * @name cn.onestravel.library.kotlin.rxrequest.common.BaseResponse
+ * @name cn.onestravel.library.kotlin.rxrequest.common.OneResponse
  * @description 请求返回结果数据基类
  * @createTime 2018/12/12 17:00
  * @author onestravel
@@ -1394,7 +1394,7 @@ RxJava+Retrofit 请求的观察者，返回特定数据结构的数据，并进�
 
 ```kotlin
 /**
- * @name cn.onestravel.library.kotlin.rxrequest.common.BaseObserver
+ * @name cn.onestravel.library.kotlin.rxrequest.common.OneObserver
  * @description 请求返回结果，返回json数据必须符合  {"code":"0000","msg":"","data":{},"datas":[]},data 和 datas 的数据 bean 相同
  * @createTime 2018/12/12 17:00
  * @author onestravel
@@ -1521,7 +1521,7 @@ import retrofit2.HttpException
 import java.io.Serializable
 
 /**
- * @name cn.onestravel.library.kotlin.rxrequest.common.BaseObserver2
+ * @name cn.onestravel.library.kotlin.rxrequest.common.OneObserver2
  * @description 请求返回结果，返回json数据必须符合 {"code":"0000","msg":"","data":{},"datas":[]},data 和 datas 的数据 bean 可以不相同
  * @createTime 2018/12/12 17:00
  * @author onestravel

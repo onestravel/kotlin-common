@@ -1,7 +1,7 @@
 package cn.test
 
 import android.os.Bundle
-import  impl.BaseMvpPresenterImpl
+import cn.onestravel.library.kotlin.mvp.presenter.impl.OneMvpPresenterImpl
 
 /**
  * @name cn.test.MainPresenterImpl
@@ -10,7 +10,7 @@ import  impl.BaseMvpPresenterImpl
  * @author onestravel
  * @version 1.0.0
  */
-class MainPresenterImpl : BaseMvpPresenterImpl<IMainView>(), IMainPresenter {
+class MainPresenterImpl : OneMvpPresenterImpl<IMainView>(), IMainPresenter {
     override fun requestTestContent() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }

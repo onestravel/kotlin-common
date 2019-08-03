@@ -9,5 +9,5 @@ import java.io.Serializable
  * @author onestravel
  * @version 1.0.0
  */
-class ResponseResult :BaseResponse(), Serializable
+class ResponseResult :OneResponse(), Serializable
 

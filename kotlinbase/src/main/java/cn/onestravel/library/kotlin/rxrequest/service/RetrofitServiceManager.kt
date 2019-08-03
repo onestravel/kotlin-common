@@ -2,11 +2,13 @@ package cn.onestravel.library.kotlin.rxrequest.service
 
 import cn.onestravel.library.kotlin.rxrequest.common.HttpCommonInterceptor
 import cn.onestravel.library.kotlin.rxrequest.common.RetryInterceptor
+import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.Currency.getInstance
 
 import java.util.concurrent.TimeUnit
 
@@ -18,12 +20,11 @@ import java.util.concurrent.TimeUnit
  * @author onestravel
  * @version 1.0.0
  */
-class RetrofitServiceManager private constructor() {
-    private val mRetrofit: Retrofit
+abstract class RetrofitServiceManager() {
+    protected val mRetrofit: Retrofit
+
     init {
         val interceptorBuild = HttpCommonInterceptor.Builder()
-        //添加公共请求参数,不可变的参数
-//        interceptorBuild.addParams("userType", "1")
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY
         val okHttpClientBuild = OkHttpClient.Builder()
@@ -36,14 +37,14 @@ class RetrofitServiceManager private constructor() {
 
         //初始化Retrofit
         mRetrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(getBaseUrl())
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClientBuild.build())
             .build()
 
     }
-
+    abstract fun getBaseUrl(): String
 
 
     /**
@@ -53,16 +54,14 @@ class RetrofitServiceManager private constructor() {
      * @param <T>
      * @return
     </T> */
-    fun <T:BaseService> create(service: Class<T>): T {
+    fun <T:OneService> create(service: Class<T>): T {
         return mRetrofit.create(service)
 
     }
 
     companion object {
-        val INSTANCE by lazy { RetrofitServiceManager() }
         private const val CONNECTION_TIMEOUT = 5
         private const val READ_TIMEOUT = 20
         private const val WRITE_TIMEOUT = 10
-        private const val BASE_URL = "https://testapi.brzhongyi.cn:9090/easydoctorv2-ws/"
     }
 }

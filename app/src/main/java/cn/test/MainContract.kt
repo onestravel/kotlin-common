@@ -1,7 +1,7 @@
 package cn.test
 
-import  BaseMvpPresenter
-import cn.onestravel.library.kotlin.mvp.view.BaseMvpView
+import cn.onestravel.library.kotlin.mvp.presenter.OneMvpPresenter
+import cn.onestravel.library.kotlin.mvp.view.OneMvpView
 
 /**
  * @name cn.onestravel.library.kotlin.mvp.MainContract
@@ -11,7 +11,7 @@ import cn.onestravel.library.kotlin.mvp.view.BaseMvpView
  * @version 1.0.0
  */
 
-public interface IMainView : BaseMvpView {
+public interface IMainView : OneMvpView {
 
     /**
      * 测试
@@ -19,7 +19,7 @@ public interface IMainView : BaseMvpView {
     fun setTestContent()
 }
 
-public interface IMainPresenter : BaseMvpPresenter<IMainView> {
+public interface IMainPresenter : OneMvpPresenter<IMainView> {
 
     /**
      * 测试

@@ -1,7 +1,7 @@
 package cn.test
 
-import cn.onestravel.kotlin.base.mvp.R
-import  BaseMvpActivity
+import cn.onestravel.kotlin.demo.mvp.R
+import cn.onestravel.library.kotlin.mvp.activity.OneMvpActivity
 
 /**
  * @name cn.test.TestMainActivity
@@ -10,7 +10,7 @@ import  BaseMvpActivity
  * @author onestravel
  * @version 1.0.0
  */
-class TestMainActivity: BaseMvpActivity<IMainView, IMainPresenter>() {
+class TestMainActivity: OneMvpActivity<IMainView, IMainPresenter>() {
     override fun createPresenter(): IMainPresenter {
         return MainPresenterImpl()
     }
