@@ -15,25 +15,22 @@ import java.lang.ref.WeakReference
  */
 open abstract class OneMvpPresenterImpl<M : OneMvpModel, V : OneMvpView> : OneMvpPresenter<V> {
 
-    private var viewRef: WeakReference<V>? = null
     protected val mModel: M? by lazy { createModel() }
     protected var mView: V? = null
 
     abstract fun createModel(): M?
 
     protected fun getView(): V? {
-        mView = viewRef?.get()
         return mView
     }
 
     protected fun isViewAttached(): Boolean {
-        return viewRef?.get() != null
+        return mView != null
     }
 
 
     private fun attach(view: V, savedInstanceState: Bundle?) {
-        viewRef = WeakReference(view)
-        mView = viewRef?.get()
+        mView = view
     }
 
     override fun onMvpAttachView(view: V, savedInstanceState: Bundle?) {
@@ -67,10 +64,6 @@ open abstract class OneMvpPresenterImpl<M : OneMvpModel, V : OneMvpView> : OneMv
     private fun detach(retainInstance: Boolean) {
         mView?.let {
             mView = null
-        }
-        viewRef?.let {
-            viewRef!!.clear()
-            viewRef = null
         }
     }
 
