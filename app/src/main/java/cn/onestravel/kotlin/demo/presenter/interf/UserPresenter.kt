@@ -1,10 +1,11 @@
 package cn.onestravel.kotlin.demo.presenter.interf
 
+import cn.onestravel.kotlin.demo.model.UserModel
 import cn.onestravel.kotlin.demo.view.UserView
 import cn.onestravel.library.kotlin.mvp.presenter.OneMvpPresenter
 
 /**
- * @name cn.onestravel.kotlin.base.mvp.presenter.interf.UserPresenter
+ * @name cn.onestravel.kotlin.base.mvp.mPresenter.interf.UserPresenter
  * @description //TODO
  * @createTime 2018/12/26 14:36
  * @author onestravel

@@ -1,6 +1,7 @@
 package  cn.onestravel.library.kotlin.mvp.presenter.impl
 
 import android.os.Bundle
+import cn.onestravel.library.kotlin.mvp.model.OneMvpModel
 import cn.onestravel.library.kotlin.mvp.presenter.OneMvpPresenter
 import cn.onestravel.library.kotlin.mvp.view.OneMvpView
 import java.lang.ref.WeakReference
@@ -12,24 +13,32 @@ import java.lang.ref.WeakReference
  * @author onestravel
  * @version 1.0.0
  */
-open class OneMvpPresenterImpl<V : OneMvpView> : OneMvpPresenter<V> {
+open abstract class OneMvpPresenterImpl<M : OneMvpModel, V : OneMvpView> : OneMvpPresenter<V> {
+
     private var viewRef: WeakReference<V>? = null
+    protected val mModel: M? by lazy { createModel() }
+    protected var mView: V? = null
+
+    abstract fun createModel(): M?
 
     protected fun getView(): V? {
-        return viewRef?.get()
+        mView = viewRef?.get()
+        return mView
     }
 
     protected fun isViewAttached(): Boolean {
         return viewRef?.get() != null
     }
 
+
     private fun attach(view: V, savedInstanceState: Bundle?) {
         viewRef = WeakReference(view)
+        mView = viewRef?.get()
     }
-
 
     override fun onMvpAttachView(view: V, savedInstanceState: Bundle?) {
         attach(view, savedInstanceState)
+        init()
     }
 
     override fun onMvpStart() {
@@ -52,13 +61,19 @@ open class OneMvpPresenterImpl<V : OneMvpView> : OneMvpPresenter<V> {
     }
 
     override fun onMvpDestroy() {
+        detach(true)
     }
 
-    private fun detach( retainInstance: Boolean) {
-        viewRef.let {
-            viewRef?.clear()
+    private fun detach(retainInstance: Boolean) {
+        mView?.let {
+            mView = null
+        }
+        viewRef?.let {
+            viewRef!!.clear()
             viewRef = null
         }
     }
 
 }
+
+

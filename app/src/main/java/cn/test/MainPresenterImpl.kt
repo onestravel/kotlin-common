@@ -1,6 +1,8 @@
 package cn.test
 
 import android.os.Bundle
+import cn.onestravel.kotlin.demo.model.User
+import cn.onestravel.kotlin.demo.model.UserModel
 import cn.onestravel.library.kotlin.mvp.presenter.impl.OneMvpPresenterImpl
 
 /**
@@ -10,7 +12,17 @@ import cn.onestravel.library.kotlin.mvp.presenter.impl.OneMvpPresenterImpl
  * @author onestravel
  * @version 1.0.0
  */
-class MainPresenterImpl : OneMvpPresenterImpl<IMainView>(), IMainPresenter {
+class MainPresenterImpl : OneMvpPresenterImpl<UserModel,IMainView>(), IMainPresenter {
+    override fun createModel(): UserModel? {
+        return null
+    }
+
+
+    override fun init() {
+    }
+
+
+
     override fun requestTestContent() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }

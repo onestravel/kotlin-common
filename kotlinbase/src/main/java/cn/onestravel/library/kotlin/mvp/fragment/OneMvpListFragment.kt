@@ -4,6 +4,7 @@ import android.os.Bundle
 import cn.onestravel.library.kotlin.one.fragment.OneListFragment
 import cn.onestravel.library.kotlin.mvp.presenter.OneMvpPresenter
 import cn.onestravel.library.kotlin.mvp.view.OneMvpView
+import cn.onestravel.library.kotlin.one.view.LoadingDialog
 
 /**
  * @name  OneMvpActivity
@@ -13,16 +14,16 @@ import cn.onestravel.library.kotlin.mvp.view.OneMvpView
  * @version 1.0.0
  */
 abstract class OneMvpListFragment<V : OneMvpView, P : OneMvpPresenter<V>> : OneListFragment(), OneMvpView {
-    private val presenter by lazy { createPresenter() }
-
+    protected val mPresenter by lazy { createPresenter() }
+    protected var mLoadingDialog: LoadingDialog? = null
     protected abstract fun createPresenter(): P
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        if (presenter == null) {
+        if (mPresenter == null) {
             throw  NullPointerException("Presenter is null! Do you return null in createPresenter()?")
         }
-        presenter.onMvpAttachView(this as V, savedInstanceState)
+        mPresenter.onMvpAttachView(this as V, savedInstanceState)
     }
 
 
@@ -30,44 +31,72 @@ abstract class OneMvpListFragment<V : OneMvpView, P : OneMvpPresenter<V>> : OneL
 
     override fun onStart() {
         super.onStart()
-        presenter.let {
+        mPresenter.let {
             it.onMvpStart()
         }
     }
 
     override fun onResume() {
         super.onResume()
-        presenter.let {
+        mPresenter.let {
             it.onMvpResume()
         }
     }
 
     override fun onPause() {
         super.onPause()
-        presenter.let {
+        mPresenter.let {
             it.onMvpPause()
         }
     }
 
     override fun onStop() {
         super.onStop()
-        presenter.let {
+        mPresenter.let {
             it.onMvpStop()
         }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        presenter.let {
+        mPresenter.let {
             it.onMvpSaveInstanceState(outState)
         }
     }
 
     override fun onDestroy() {
-        super.onDestroy()
-        presenter.let {
+        mLoadingDialog?.let {
+            it.destroy()
+            mLoadingDialog = null
+        }
+        mPresenter.let {
             it.onMvpDetachView(false)
             it.onMvpDestroy()
+        }
+        super.onDestroy()
+
+    }
+
+    override fun showLoading(content: String?) {
+        if (mLoadingDialog == null) {
+            mLoadingDialog = LoadingDialog.getInstance(context!!)
+            mLoadingDialog!!.title = content ?: "正在加载..."
+            if (!mLoadingDialog!!.isShowing) {
+                mLoadingDialog!!.show()
+            }
+        }
+
+    }
+
+    override fun hideLoading() {
+        mLoadingDialog?.let {
+            mLoadingDialog!!.dismiss()
+        }
+    }
+
+    override fun onResponseError(msg: String?) {
+        msg?.let {
+            showToast(msg)
         }
     }
 

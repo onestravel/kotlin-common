@@ -23,5 +23,4 @@ class UserActivity: OneMvpActivity<UserView, UserPresenter>() {
     }
 
 
-
 }

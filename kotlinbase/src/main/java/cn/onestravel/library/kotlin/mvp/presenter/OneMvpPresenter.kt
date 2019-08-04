@@ -1,6 +1,7 @@
 package cn.onestravel.library.kotlin.mvp.presenter
 
 import android.os.Bundle
+import cn.onestravel.library.kotlin.mvp.model.OneMvpModel
 import cn.onestravel.library.kotlin.mvp.view.OneMvpView
 
 /**
@@ -27,5 +28,7 @@ interface OneMvpPresenter<in V : OneMvpView> {
     fun onMvpDetachView(retainInstance: Boolean)
 
     fun onMvpDestroy()
+
+    fun init()
 
 }
