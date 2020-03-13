@@ -1,7 +1,7 @@
 package cn.onestravel.kotlin.demo.view
 
 import cn.onestravel.kotlin.demo.model.User
-import cn.onestravel.library.kotlin.mvp.view.OneMvpView
+import cn.onestravel.library.mvp.view.OneMvpView
 
 /**
  * @name cn.onestravel.kotlin.base.mvp.view.UserView

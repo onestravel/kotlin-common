@@ -1,7 +1,7 @@
 package cn.test
 
-import cn.onestravel.library.kotlin.mvp.presenter.OneMvpPresenter
-import cn.onestravel.library.kotlin.mvp.view.OneMvpView
+import cn.onestravel.library.mvp.presenter.OneMvpPresenter
+import cn.onestravel.library.mvp.view.OneMvpView
 
 /**
  * @name cn.onestravel.library.kotlin.mvp.MainContract

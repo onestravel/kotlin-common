@@ -1,9 +1,8 @@
 package cn.test
 
 import android.os.Bundle
-import cn.onestravel.kotlin.demo.model.User
 import cn.onestravel.kotlin.demo.model.UserModel
-import cn.onestravel.library.kotlin.mvp.presenter.impl.OneMvpPresenterImpl
+import cn.onestravel.library.mvp.presenter.impl.OneMvpPresenterImpl
 
 /**
  * @name cn.test.MainPresenterImpl

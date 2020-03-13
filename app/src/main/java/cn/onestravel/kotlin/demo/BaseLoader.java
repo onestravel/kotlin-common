@@ -1,8 +1,8 @@
 package cn.onestravel.kotlin.demo;
 
-import cn.onestravel.library.kotlin.rxrequest.loader.OneLoader;
-import cn.onestravel.library.kotlin.rxrequest.service.OneService;
-import cn.onestravel.library.kotlin.rxrequest.service.RetrofitServiceManager;
+import cn.onestravel.library.rxrequest.loader.OneLoader;
+import cn.onestravel.library.rxrequest.service.OneService;
+import cn.onestravel.library.rxrequest.service.RetrofitServiceManager;
 import org.jetbrains.annotations.NotNull;
 
 /**

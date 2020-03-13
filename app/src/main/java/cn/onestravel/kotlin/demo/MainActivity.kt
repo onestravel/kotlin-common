@@ -3,15 +3,15 @@ package cn.onestravel.kotlin.demo
 
 import cn.onestravel.kotlin.demo.model.User
 import cn.onestravel.kotlin.demo.mvp.R
-import cn.onestravel.library.kotlin.one.adapter.OneRecyclerAdapter
-import cn.onestravel.library.kotlin.one.adapter.VH
-import cn.onestravel.library.kotlin.rxrequest.activity.OneRxActivity
-import cn.onestravel.library.kotlin.rxrequest.common.OneObserver1
-import cn.onestravel.library.kotlin.rxrequest.common.ResponseResult1
+import cn.onestravel.library.common.adapter.OneRecyclerAdapter
+import cn.onestravel.library.common.adapter.VH
+import cn.onestravel.library.rxrequest.activity.OneRxActivity
+import cn.onestravel.library.rxrequest.common.OneObserver1
+import cn.onestravel.library.rxrequest.common.ResponseResult1
 
 class MainActivity : OneRxActivity() {
     override fun getLayoutId(): Int {
-       return R.layout.layout_test
+        return R.layout.layout_test
     }
 
     val adapter = TestAdapter()
@@ -43,8 +43,8 @@ class MainActivity : OneRxActivity() {
 //            .compose(this.<MedicationOrderRrcordListBean>bindToLifecycle())
 
 
-        val userObserver: OneObserver1<User> = object : OneObserver1<User>(){
-             override fun onSuccess(result: ResponseResult1<User>) {
+        val userObserver: OneObserver1<User> = object : OneObserver1<User>() {
+            override fun onSuccess(result: ResponseResult1<User>) {
 
 
             }
@@ -54,14 +54,11 @@ class MainActivity : OneRxActivity() {
             }
 
 
-
-
-
-
         }
-       val loader = OrderRecordLoader()
-        loader.getOrderDetailInfo(HashMap<String,String>() as Map<String, String>).compose(bindToLifecycle<ResponseResult1<User>>()).subscribe(userObserver)
-//            .compose(this.bindToLifecycle()).subscribe(userObserver)
+        val loader = OrderRecordLoader()
+        loader.getOrderDetailInfo(HashMap<String, String>() as Map<String, String>)
+            .compose(bindToLifecycle<ResponseResult1<User>>())
+            .subscribe(userObserver)
     }
 
     private fun addData(adapter: TestAdapter, isRefresh: Boolean = false) {

@@ -1,6 +1,6 @@
 package cn.onestravel.kotlin.demo.model;
 
-import cn.onestravel.library.kotlin.mvp.model.OneMvpModel;
+import cn.onestravel.library.mvp.model.OneMvpModel;
 
 /**
  * @author onestravel

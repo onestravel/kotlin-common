@@ -2,7 +2,7 @@ package cn.onestravel.kotlin.demo
 
 
 import cn.onestravel.kotlin.demo.model.User
-import cn.onestravel.library.kotlin.rxrequest.common.ResponseResult1
+import cn.onestravel.library.rxrequest.common.ResponseResult1
 import io.reactivex.Observable
 
 /**

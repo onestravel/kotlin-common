@@ -7,11 +7,11 @@
             android:id="@+id/mRefreshLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        <cn.onestravel.library.kotlin.one.view.LoadMoreRecyclerView
+        <cn.onestravel.library.common.view.LoadMoreRecyclerView
                 android:id="@+id/mRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-        </cn.onestravel.library.kotlin.one.view.LoadMoreRecyclerView>
+        </cn.onestravel.library.common.view.LoadMoreRecyclerView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

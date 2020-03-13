@@ -1,6 +1,6 @@
 package cn.onestravel.kotlin.demo
 
-import cn.onestravel.library.kotlin.rxrequest.service.RetrofitServiceManager
+import cn.onestravel.library.rxrequest.service.RetrofitServiceManager
 
 /**
  * @author onestravel
@@ -9,6 +9,6 @@ import cn.onestravel.library.kotlin.rxrequest.service.RetrofitServiceManager
  */
 object BaseServiceManager : RetrofitServiceManager() {
     override fun getBaseUrl(): String {
-        return ""
+        return "https://onestravel.cn/"
     }
 }

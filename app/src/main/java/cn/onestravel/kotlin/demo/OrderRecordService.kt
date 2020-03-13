@@ -1,8 +1,8 @@
 package cn.onestravel.kotlin.demo
 
 import cn.onestravel.kotlin.demo.model.User
-import cn.onestravel.library.kotlin.rxrequest.common.ResponseResult1
-import cn.onestravel.library.kotlin.rxrequest.service.OneService
+import cn.onestravel.library.rxrequest.common.ResponseResult1
+import cn.onestravel.library.rxrequest.service.OneService
 import io.reactivex.Observable
 import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
